@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/users', [UserController::class, 'register']);
 Route::get('/lawyers', [LawyerApiController::class, 'index']);
-//Route::post('/lawyers', [LawyerApiController::class, 'store']);
+Route::post('/lawyers', [LawyerApiController::class, 'store']);
 
 Route::group(['middleware' => ['auth:sanctum']], function (){
     Route::post('/register_profile', [NfcProfileController::class, 'store']);
