@@ -1,0 +1,26 @@
+
+
+<?php
+
+class AddRequest extends PartnerRequest
+{
+
+    /**s
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'phone' => 'required',
+            'country' => 'required',
+            'city' => 'required',
+            'address' => 'required',
+            'create_limit' => 'required'
+        ];
+    }
+}
